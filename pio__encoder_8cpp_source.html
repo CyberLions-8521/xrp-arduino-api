@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>XRP-Arduino-Project: xrp-arduino/src/pio_encoder.cpp Source File</title>
+<title>XRP-Arduino-Project: C:/Users/KV/Documents/GitHub/XRP-Arduino-Project/xrp-arduino/src/pio_encoder.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -115,72 +115,71 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">bool</span> PioEncoder::not_first_instance;</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
 <div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_pio_encoder.html#acbb1c1b80e1a671211a99069cc5a17c1">   23</a></span><a class="code hl_function" href="class_pio_encoder.html#acbb1c1b80e1a671211a99069cc5a17c1">PioEncoder::PioEncoder</a>(<span class="keyword">const</span> uint8_t pin, <span class="keyword">const</span> uint16_t resolution, <span class="keyword">const</span> <span class="keywordtype">bool</span> flip, <span class="keyword">const</span> <span class="keywordtype">int</span> zero_offset, <span class="keyword">const</span> uint8_t count_mode, PIO pio, <span class="keyword">const</span> uint sm, <span class="keyword">const</span> <span class="keywordtype">int</span> max_step_rate){</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_pio_encoder.html#a0c1659b1ebadb1834f1104861111765c">   23</a></span><a class="code hl_function" href="class_pio_encoder.html#a0c1659b1ebadb1834f1104861111765c">PioEncoder::PioEncoder</a>(<span class="keyword">const</span> uint8_t pin, <span class="keyword">const</span> <span class="keywordtype">bool</span> flip, <span class="keyword">const</span> <span class="keywordtype">int</span> zero_offset, <span class="keyword">const</span> uint8_t count_mode, PIO pio, <span class="keyword">const</span> uint sm, <span class="keyword">const</span> <span class="keywordtype">int</span> max_step_rate){</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">static</span> uint offset;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    _resolution = resolution;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    this-&gt;pin = pin;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    this-&gt;pio = pio;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    this-&gt;sm = sm;</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    this-&gt;max_step_rate = max_step_rate;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    this-&gt;<a class="code hl_function" href="class_pio_encoder.html#a1d33c6feeb47d85a1f645a36be17958b">flip</a>(flip);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    this-&gt;zero_offset = zero_offset;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    this-&gt;count_mode = count_mode;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    this-&gt;pin = pin;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    this-&gt;pio = pio;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    this-&gt;sm = sm;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    this-&gt;max_step_rate = max_step_rate;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    this-&gt;<a class="code hl_function" href="class_pio_encoder.html#a1d33c6feeb47d85a1f645a36be17958b">flip</a>(flip);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    this-&gt;zero_offset = zero_offset;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    this-&gt;count_mode = count_mode;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
 </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_pio_encoder.html#a0bb85a9c5b5ec2fb93d81abc6ef34b2b">   35</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_pio_encoder.html#a0bb85a9c5b5ec2fb93d81abc6ef34b2b">PioEncoder::begin</a>(){</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    pinMode(pin, INPUT);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    pinMode(pin+1, INPUT);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordflow">if</span> (!not_first_instance){</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        offset = pio_add_program(pio, &amp;quadrature_encoder_program);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    }</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    not_first_instance=<span class="keyword">true</span>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordflow">if</span> (sm==-1){</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        sm = pio_claim_unused_sm(pio, <span class="keyword">true</span>);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    }</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    sm=sm;</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    quadrature_encoder_program_init(pio,sm,offset,pin,max_step_rate);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="foldopen" id="foldopen00034" data-start="{" data-end="}">
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="class_pio_encoder.html#a0bb85a9c5b5ec2fb93d81abc6ef34b2b">   34</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_pio_encoder.html#a0bb85a9c5b5ec2fb93d81abc6ef34b2b">PioEncoder::begin</a>(){</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    pinMode(pin, INPUT);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    pinMode(pin+1, INPUT);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordflow">if</span> (!not_first_instance){</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        offset = pio_add_program(pio, &amp;quadrature_encoder_program);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    }</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    not_first_instance=<span class="keyword">true</span>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordflow">if</span> (sm==-1){</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        sm = pio_claim_unused_sm(pio, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    }</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    sm=sm;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    quadrature_encoder_program_init(pio,sm,offset,pin,max_step_rate);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>}</div>
 </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_pio_encoder.html#a0dc8f61d3bed958c5a2dc0502b7470ff">   50</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_pio_encoder.html#a0dc8f61d3bed958c5a2dc0502b7470ff">PioEncoder::reset</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> reset_value){</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    quadrature_encoder_reset(pio, sm);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    zero_offset=reset_value;</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
+<div class="foldopen" id="foldopen00049" data-start="{" data-end="}">
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="class_pio_encoder.html#a0dc8f61d3bed958c5a2dc0502b7470ff">   49</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_pio_encoder.html#a0dc8f61d3bed958c5a2dc0502b7470ff">PioEncoder::reset</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> reset_value){</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    quadrature_encoder_reset(pio, sm);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    zero_offset=reset_value;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
 </div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_pio_encoder.html#a1d33c6feeb47d85a1f645a36be17958b">   55</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_pio_encoder.html#a1d33c6feeb47d85a1f645a36be17958b">PioEncoder::flip</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> x){</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">if</span> (x){</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        flip_it=-1;</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">else</span>{</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        flip_it=1;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>}</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="foldopen" id="foldopen00054" data-start="{" data-end="}">
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_pio_encoder.html#a1d33c6feeb47d85a1f645a36be17958b">   54</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_pio_encoder.html#a1d33c6feeb47d85a1f645a36be17958b">PioEncoder::flip</a>(<span class="keyword">const</span> <span class="keywordtype">bool</span> x){</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">if</span> (x){</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        flip_it=-1;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordflow">else</span>{</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        flip_it=1;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    }</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>}</div>
 </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="foldopen" id="foldopen00064" data-start="{" data-end="}">
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_pio_encoder.html#a7e8e9addb97972e8f19da5fcdce0bf56">   64</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_pio_encoder.html#a7e8e9addb97972e8f19da5fcdce0bf56">PioEncoder::setMode</a>(<span class="keyword">const</span> uint8_t mode){</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    count_mode = mode;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="foldopen" id="foldopen00063" data-start="{" data-end="}">
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="class_pio_encoder.html#a7e8e9addb97972e8f19da5fcdce0bf56">   63</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_pio_encoder.html#a7e8e9addb97972e8f19da5fcdce0bf56">PioEncoder::setMode</a>(<span class="keyword">const</span> uint8_t mode){</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    count_mode = mode;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
 </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
-<div class="foldopen" id="foldopen00068" data-start="{" data-end="}">
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="class_pio_encoder.html#a6a592d88ca52584d19a3a3fa5f2de98e">   68</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="class_pio_encoder.html#a6a592d88ca52584d19a3a3fa5f2de98e">PioEncoder::getCount</a>(){</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordflow">return</span> flip_it*(quadrature_encoder_get_count(pio, sm)&gt;&gt;count_mode)+zero_offset;</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="}">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_pio_encoder.html#a6a592d88ca52584d19a3a3fa5f2de98e">   67</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="class_pio_encoder.html#a6a592d88ca52584d19a3a3fa5f2de98e">PioEncoder::getCount</a>(){</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    <span class="keywordflow">return</span> flip_it*(quadrature_encoder_get_count(pio, sm)&gt;&gt;count_mode)+zero_offset;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>}</div>
 </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
-<div class="ttc" id="aclass_pio_encoder_html_a0bb85a9c5b5ec2fb93d81abc6ef34b2b"><div class="ttname"><a href="class_pio_encoder.html#a0bb85a9c5b5ec2fb93d81abc6ef34b2b">PioEncoder::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdef"><b>Definition</b> <a href="#l00035">pio_encoder.cpp:35</a></div></div>
-<div class="ttc" id="aclass_pio_encoder_html_a0dc8f61d3bed958c5a2dc0502b7470ff"><div class="ttname"><a href="class_pio_encoder.html#a0dc8f61d3bed958c5a2dc0502b7470ff">PioEncoder::reset</a></div><div class="ttdeci">void reset(const int reset_value=0)</div><div class="ttdef"><b>Definition</b> <a href="#l00050">pio_encoder.cpp:50</a></div></div>
-<div class="ttc" id="aclass_pio_encoder_html_a1d33c6feeb47d85a1f645a36be17958b"><div class="ttname"><a href="class_pio_encoder.html#a1d33c6feeb47d85a1f645a36be17958b">PioEncoder::flip</a></div><div class="ttdeci">void flip(const bool x=true)</div><div class="ttdef"><b>Definition</b> <a href="#l00055">pio_encoder.cpp:55</a></div></div>
-<div class="ttc" id="aclass_pio_encoder_html_a6a592d88ca52584d19a3a3fa5f2de98e"><div class="ttname"><a href="class_pio_encoder.html#a6a592d88ca52584d19a3a3fa5f2de98e">PioEncoder::getCount</a></div><div class="ttdeci">int getCount()</div><div class="ttdef"><b>Definition</b> <a href="#l00068">pio_encoder.cpp:68</a></div></div>
-<div class="ttc" id="aclass_pio_encoder_html_a7e8e9addb97972e8f19da5fcdce0bf56"><div class="ttname"><a href="class_pio_encoder.html#a7e8e9addb97972e8f19da5fcdce0bf56">PioEncoder::setMode</a></div><div class="ttdeci">void setMode(const uint8_t mode=COUNT_4X)</div><div class="ttdef"><b>Definition</b> <a href="#l00064">pio_encoder.cpp:64</a></div></div>
-<div class="ttc" id="aclass_pio_encoder_html_acbb1c1b80e1a671211a99069cc5a17c1"><div class="ttname"><a href="class_pio_encoder.html#acbb1c1b80e1a671211a99069cc5a17c1">PioEncoder::PioEncoder</a></div><div class="ttdeci">PioEncoder(const uint8_t pin, const uint16_t resolution=1, const bool flip=false, const int zero_offset=0, const uint8_t count_mode=COUNT_4X, PIO pio=pio0, const uint sm=-1, const int max_step_rate=0)</div><div class="ttdef"><b>Definition</b> <a href="#l00023">pio_encoder.cpp:23</a></div></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="ttc" id="aclass_pio_encoder_html_a0bb85a9c5b5ec2fb93d81abc6ef34b2b"><div class="ttname"><a href="class_pio_encoder.html#a0bb85a9c5b5ec2fb93d81abc6ef34b2b">PioEncoder::begin</a></div><div class="ttdeci">void begin()</div><div class="ttdef"><b>Definition</b> <a href="#l00034">pio_encoder.cpp:34</a></div></div>
+<div class="ttc" id="aclass_pio_encoder_html_a0c1659b1ebadb1834f1104861111765c"><div class="ttname"><a href="class_pio_encoder.html#a0c1659b1ebadb1834f1104861111765c">PioEncoder::PioEncoder</a></div><div class="ttdeci">PioEncoder(const uint8_t pin, const bool flip=false, const int zero_offset=0, const uint8_t count_mode=COUNT_4X, PIO pio=pio0, const uint sm=-1, const int max_step_rate=0)</div><div class="ttdef"><b>Definition</b> <a href="#l00023">pio_encoder.cpp:23</a></div></div>
+<div class="ttc" id="aclass_pio_encoder_html_a0dc8f61d3bed958c5a2dc0502b7470ff"><div class="ttname"><a href="class_pio_encoder.html#a0dc8f61d3bed958c5a2dc0502b7470ff">PioEncoder::reset</a></div><div class="ttdeci">void reset(const int reset_value=0)</div><div class="ttdef"><b>Definition</b> <a href="#l00049">pio_encoder.cpp:49</a></div></div>
+<div class="ttc" id="aclass_pio_encoder_html_a1d33c6feeb47d85a1f645a36be17958b"><div class="ttname"><a href="class_pio_encoder.html#a1d33c6feeb47d85a1f645a36be17958b">PioEncoder::flip</a></div><div class="ttdeci">void flip(const bool x=true)</div><div class="ttdef"><b>Definition</b> <a href="#l00054">pio_encoder.cpp:54</a></div></div>
+<div class="ttc" id="aclass_pio_encoder_html_a6a592d88ca52584d19a3a3fa5f2de98e"><div class="ttname"><a href="class_pio_encoder.html#a6a592d88ca52584d19a3a3fa5f2de98e">PioEncoder::getCount</a></div><div class="ttdeci">int getCount()</div><div class="ttdef"><b>Definition</b> <a href="#l00067">pio_encoder.cpp:67</a></div></div>
+<div class="ttc" id="aclass_pio_encoder_html_a7e8e9addb97972e8f19da5fcdce0bf56"><div class="ttname"><a href="class_pio_encoder.html#a7e8e9addb97972e8f19da5fcdce0bf56">PioEncoder::setMode</a></div><div class="ttdeci">void setMode(const uint8_t mode=COUNT_4X)</div><div class="ttdef"><b>Definition</b> <a href="#l00063">pio_encoder.cpp:63</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
